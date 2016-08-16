@@ -43,9 +43,8 @@ public class ClientType {
 	public ClientType(){
 		super();
 	}
-	public ClientType(int clientTypeId, int clientType) {
+	public ClientType(int clientType) {
 		this();
-		this.clientTypeId = clientTypeId;
 		this.clientType = clientType;
 	}
 }

@@ -104,10 +104,8 @@ public class Client {
 	public Client(){
 		super();
 	}
-	public Client(int imsClientId, String clientName, String clientEmail, String pointOfContactName, String clientPhone,
-			String clientFax) {
+	public Client(String clientName, String clientEmail, String pointOfContactName, String clientPhone, String clientFax) {
 		this();
-		this.imsClientId = imsClientId;
 		this.clientName = clientName;
 		this.clientEmail = clientEmail;
 		this.pointOfContactName = pointOfContactName;

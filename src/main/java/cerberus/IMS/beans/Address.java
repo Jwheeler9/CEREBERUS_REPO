@@ -10,7 +10,7 @@ public class Address {
 	@Id
 	@Column(name="IMS_ADDRESS_ID")
 	@GeneratedValue(strategy=GenerationType.SEQUENCE,generator="addressSequence")
-	@SequenceGenerator(name="addressSequence",sequenceName="ADDRESS_SEQUENCE",initialValue=1,allocationSize=1)
+	@SequenceGenerator(name="addressSequence",sequenceName="ADDRESS_SEQUENCE",initialValue=3,allocationSize=1)
 	private int imsAddressId;
 	
 	@Column(name="STREET_ADDRESS_1", length=250, nullable=false)
@@ -69,12 +69,12 @@ public class Address {
 	public Address() {
 		super();
 	}
-	public Address(int imsAddressId, String streetAddress1, String streetAddress2, String addressCity, String addressZip) {
+	public Address(String streetAddress1, String streetAddress2, String addressCity, String addressZip, StateAbbrv state) {
 		this();
-		this.imsAddressId = imsAddressId;
 		this.streetAddress1 = streetAddress1;
 		this.streetAddress2 = streetAddress2;
 		this.addressCity = addressCity;
 		this.addressZip = addressZip;
+		this.state = state;
 	}
 }
